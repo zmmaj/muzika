@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>SrBinOS Muzika Pro - Pomoc Korisniku</title>
+        <meta name="description" content="Pomoc za aplikaciju SrBinOS Muzika Pro">
+        <meta name="keywords" content="muzika, audio, pomoc, srbinos, mp3, wav, plejlista">
+    </head>
+    <body>
+        <!-- PROMENJENO: Pozadina je sada svetlo zelena (#e8f8f5), a tekst tamno zeleni (#196f3d) -->
+        <header style="background-color: #e8f8f5; color: #196f3d; padding: 20px; text-align: center; border-bottom: 3px solid #2acc7e;">
+            <h1>SrBinOS Muzika Pro - Pomoc Korisniku</h1>
+        </header>
+
+        <div style="padding: 20px; max-width: 800px; margin: 0 auto; line-height: 1.6; font-family: sans-serif;">
+            <p><strong>SrBinOS Muzika Pro</strong> je napredna aplikacija za reprodukciju muzickih datoteka unutar SrBinOS grafickog okruzenja. Donosi prosiren interfejs sa padajucim menijima, direktnim komandama za preskakanje numera i mocnim uspravnim kontrolama za upravljanje plejlistom.</p>
+
+            <p><strong>Podrzani audio formati:</strong></p>
+            <p style="background-color: #e0e0e0; padding: 10px; font-family: monospace; display: inline-block;">
+                ".mp3", ".MP3", ".wav", ".WAV"
+            </p>
+
+            <!-- PROMENJENO: Podnaslovi su u zelenom tonu (#229954) -->
+            <h3 style="color: #229954; border-bottom: 2px solid #ecf0f1; padding-bottom: 5px;">Glavni Meni (Na vrhu prozora)</h3>
+            <ul>
+                <li><strong>File &rarr; Izlaz (Ctrl+Q):</strong> Bezbbedno gasi audio drajver, oslobadja RAM memoriju i zatvara aplikaciju.</li>
+                <li><strong>Help &rarr; O Programu (F1):</strong> Prikazuje osnovne informacije o verziji programa direktno na statusnom ekranu.</li>
+            </ul>
+
+            <h3 style="color: #229954; border-bottom: 2px solid #ecf0f1; padding-bottom: 5px;">Gornje Kontrole Plejera</h3>
+            <ul>
+                <li><strong>PREV:</strong> Zaustavlja reprodukciju, cisti bafer, vraca izbor na prethodnu pesmu i automatski je pokrece ako je muzika vec svirala. Ako ste na prvoj numeri, skace na kraj liste.</li>
+                <li><strong>PLAY:</strong> Pokrece reprodukciju trenutno izabrane pesme. Ako je reprodukcija pauzirana, nastavlja je od mesta na kojem je zaustavljena.</li>
+                <li><strong>PAUZA:</strong> Privremeno pauzira reprodukciju. Pritiskom na PLAY reprodukcija se nastavlja.</li>
+                <li><strong>STOP:</strong> Momentalno prekida reprodukciju, gasi aktivnu audio nit i cisti privremene zvučne bafere kako bi oslobodio memoriju operativnog sistema.</li>
+                <li><strong>NEXT:</strong> Zaustavlja trenutni zvuk i prebacuje na sledecu pesmu u listi. Ako dodje do kraja, automatski se vraca na prvu pesmu. Ukoliko je na listi samo jedna pesma, ponavlja je.</li>
+                <li><strong>LIST:</strong> Kompaktno pomocno dugme gurnuto skroz desno, rezervisano za buduca prosirenja grafickog interfejsa.</li>
+            </ul>
+
+            <h3 style="color: #229954; border-bottom: 2px solid #ecf0f1; padding-bottom: 5px;">Desne Uspravne Komande Plejliste</h3>
+            <p>Ova dugmad se nalaze sa desne strane suzene liste i omogucavaju napredno upravljanje fajlovima u hodu:</p>
+            <ul>
+                <li><strong>UCITAJ:</strong> Otvara Prompt prozorcic gde mozete rucno ukucati putanju do zeljenog foldera (npr. <code>.</code> ili <code>/data</code>). Plejer ce pokrenuti duboku rekurzivnu pretragu i ucitati sve podrzane audio fajlove iz tog foldera i njegovih podfoldera.</li>
+                <li><strong>PESMA:</strong> Pokrece sistemski File Dialog koji vam omogucava graficki izbor pojedinacne MP3 ili WAV pesme sa bilo kog mesta na sistemu i njeno automatsko dodavanje na kraj trenutne liste.</li>
+                <li><strong>OSVEZI:</strong> Ponovo skenira trenutni radni direktorijum i u potpunosti osvezava graficki prikaz numera.</li>
+                <li><strong>OBRISI:</strong> Instantno prazni kompletnu plejlistu i resetuje memorijski niz. Zbog bezbednosti zvučne kartice, muzika se automatski zaustavlja pre brisanja.</li>
+            </ul>
+
+            <h3 style="color: #229954; border-bottom: 2px solid #ecf0f1; padding-bottom: 5px;">Graficki Elementi i Tastatura</h3>
+            <ul>
+                <li><strong>Lista pesama:</strong> Prikazuje nativna imena svih ucitanih fajlova. Selektovana pesma je oznacena sistemskim plavim kursorom grafickog drajvera. Propadanje i krahiranje memorije pri dodavanju novih stavki je trajno reseno automatskim dinamicvkim dodavanjem.</li>
+                <li><strong>Kontrola jacine zvuka:</strong> Strelica GORE na tastaturi povecava jacinu softverskog skaliranja PCM signala za 5%, dok je strelica DOLE smanjuje za 5%. Opseg je od 0% do 100% (Mute) bez distorzije zvuka.</li>
+                <li><strong>Zastita od trke niti (Race Condition):</strong> Prilikom brzog preskakanja numera preko tastera NEXT/PREV, ugradjena je automatska pauza od 2 sekunde kako bi se Hound mikser i DMA bafer potpuno ispraznili pre ucitavanja novog audio konteksta.</li>
+            </ul>
+
+            <p style="text-align: right; margin-top: 30px;"><strong>ZmajSoft</strong></p>
+        </div>
+
+        <!-- PROMENJENO: Footer je takođe usklađen u svetlo zeleni ton -->
+        <footer style="background-color: #e8f8f5; color: #196f3d; padding: 20px; text-align: center; margin-top: 30px; border-top: 3px solid #2acc7e;">
+            <p>&copy; 2026 ZmajSoft &amp; SrBinOS. Sva prava zadrzana.</p>
+        </footer>
+    </body>
+</html>
