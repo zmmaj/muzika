@@ -66,7 +66,7 @@ errno_t kreiraj_meni(muzika_t *muzika)
 	ui_fixed_add(muzika->fixed, ui_menu_bar_ctl(muzika->menu_bar));
 
 	// Pozicioniranje trake menija na sam vrh (visina 20px je stabilna za HelenOS menije)
-	gfx_rect_t mbar_rect = { {0, 20}, {440, 40} };
+	gfx_rect_t mbar_rect = { {0, 25}, {440, 40} };
 	ui_menu_bar_set_rect(muzika->menu_bar, &mbar_rect);
 
 	// 2. Kreiranje "File" padajućeg menija i stavke "Izlaz"
